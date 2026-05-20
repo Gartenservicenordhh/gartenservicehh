@@ -14,133 +14,108 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Galerie-Styling */
+    #galerie {
+      background-color: #101c33; /* Dunkelblauer Hintergrund */
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .galerie-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .galerie-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .galerie-item {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .galerie-item img {
+      width: 100%;
+      height: 260px; /* Einheitliche Höhe */
+      object-fit: cover; /* Bilder füllen den Raum, ohne verzerrt zu werden */
+      display: block;
+    }
+
+    .galerie-caption {
+      padding: 15px;
+      font-weight: 600;
+      color: #2e7d32; /* Grüner Text */
+      background: white;
+    }
+
+    /* Responsives Design für kleinere Bildschirme */
+    @media (max-width: 900px) {
+      .galerie-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .galerie-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- WhatsApp-Button mit korrekter Nummer und Sicherheitsattributen -->
 <a class="whatsapp-button" href="https://wa.me/4915756390366" target="_blank" rel="noopener noreferrer">
   WhatsApp
 </a>
 
 <header class="hero">
-  <nav>
-    <div class="logo-area">
-      <img src="logo.svg" alt="Gartenservice Nord Logo">
-      <span>Gartenservice Nord</span>
-    </div>
-    <ul>
-      <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#galerie">Galerie</a></li> <!-- Link zur neuen Galerie -->
-      <li><a href="#kontakt">Kontakt</a></li>
-      <li><a href="#impressum">Impressum</a></li>
-    </ul>
-  </nav>
+  </header>
 
-  <div class="hero-content fade-up">
-    <h1>Professionelle Gartenpflege in Hamburg</h1>
-    <p>Wir kümmern uns um gepflegte Gärten – von Heckenschnitt bis Entsorgung. Modern, zuverlässig und sauber.</p>
-    <a href="#kontakt" class="btn">Kostenlos anfragen</a>
-  </div>
-</header>
-
-<!-- Sektion: Leistungen -->
 <section id="leistungen" class="section">
-  <h2 class="fade-up">Unsere Leistungen</h2>
-  <div class="cards">
-    <div class="card fade-up">
-      <h3>🌱 Gartenpflege</h3>
-      <p>Pflege von privaten und gewerblichen Außenanlagen.</p>
-    </div>
-    <div class="card fade-up">
-      <h3>✂️ Heckenschnitt</h3>
-      <p>Professioneller Rückschnitt von Hecken und Sträuchern.</p>
-    </div>
-    <div class="card fade-up">
-      <h3>🚜 Rasenservice</h3>
-      <p>Rasen mähen, Pflege und saubere Grünflächen.</p>
-    </div>
-    <div class="card fade-up">
-      <h3>🧹 Entsorgung</h3>
-      <p>Komplette Entsorgung von Grünabfällen inklusive Transport.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- NEU: Galerie-Sektion mit hochwertigen, lizenzfreien Bildern -->
-<section id="galerie" class="section">
-  <h2 class="fade-up">Unsere Arbeit im Fokus</h2>
+<section id="galerie">
+  <h2 class="galerie-title fade-up">Unsere Arbeit im Fokus</h2>
   
-  <div class="galerie-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 20px 0; max-width: 1200px; margin: 0 auto;">
+  <div class="galerie-grid">
     
-    <!-- Bild 1: Rasenservice -->
-    <div class="galerie-item fade-up" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); background: #fff;">
-      <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb18865?auto=format&fit=crop&w=600&q=80" alt="Professioneller Rasenschnitt" style="width: 100%; height: 260px; object-fit: cover; display: block;">
-      <div style="padding: 15px; font-weight: 600; color: #2e7d32; text-align: center;">Kräftiger & sauberer Rasen</div>
+    <div class="galerie-item fade-up">
+      <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb18865?auto=format&fit=crop&w=600&q=80" alt="Saftig grüner Rasen">
+      <div class="galerie-caption">Kräftiger & sauberer Rasen</div>
     </div>
 
-    <!-- Bild 2: Heckenschnitt -->
-    <div class="galerie-item fade-up" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); background: #fff;">
-      <img src="https://images.unsplash.com/photo-1617111364539-74d39ef444d9?auto=format&fit=crop&w=600&q=80" alt="Präziser Heckenschnitt" style="width: 100%; height: 260px; object-fit: cover; display: block;">
-      <div style="padding: 15px; font-weight: 600; color: #2e7d32; text-align: center;">Präziser Form- & Heckenschnitt</div>
+    <div class="galerie-item fade-up">
+      <img src="https://images.unsplash.com/photo-1617111364539-74d39ef444d9?auto=format&fit=crop&w=600&q=80" alt="Perfekt geschnittene Hecke">
+      <div class="galerie-caption">Präziser Form- & Heckenschnitt</div>
     </div>
 
-    <!-- Bild 3: Gartenpflege allgemein -->
-    <div class="galerie-item fade-up" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); background: #fff;">
-      <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" alt="Gepflegte Außenanlagen" style="width: 100%; height: 260px; object-fit: cover; display: block;">
-      <div style="padding: 15px; font-weight: 600; color: #2e7d32; text-align: center;">Gepflegte Wohlfühloasen</div>
+    <div class="galerie-item fade-up">
+      <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" alt="Schön gestalteter Gartenweg">
+      <div class="galerie-caption">Gepflegte Wohlfühloasen</div>
     </div>
 
   </div>
 </section>
 
-<!-- Sektion: Kontakt -->
 <section id="kontakt" class="section dark">
-  <h2 class="fade-up">Kontaktformular</h2>
-  
-  <form class="contact-form fade-up" action="https://formspree.io/f/mjgzybao" method="POST">
-    <!-- Spam-Schutz für Formspree -->
-    <input type="text" name="_gotcha" style="display:none">
-    
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="E-Mail" required>
-    <textarea name="message" rows="6" placeholder="Ihre Nachricht" required></textarea>
-    
-    <!-- DSGVO Checkbox -->
-    <label class="checkbox-label" style="font-size: 0.85rem; color: #ccc; display: flex; align-items: flex-start; gap: 10px; margin: 0 auto 20px auto; text-align: left; max-width: 450px;">
-      <input type="checkbox" required style="margin-top: 3px;"> 
-      <span>Ich stimme zu, dass meine Angaben zur Beantwortung meiner Anfrage verarbeitet werden.</span>
-    </label>
+  </section>
 
-    <button type="submit">Nachricht senden</button>
-  </form>
-</section>
-
-<!-- Sektion: Impressum -->
 <section id="impressum" class="section">
-  <h2>Impressum</h2>
-  
-  <div class="impressum-box" style="line-height: 1.7; max-width: 600px; margin: 0 auto; text-align: left; padding: 20px; border-radius: 8px; border: 1px dashed #ddd;">
-    <p><strong>Angaben gemäß § 5 DDG:</strong></p>
-    <p>
-      Gartenservice Nord<br>
-      Inhaber: Faruk Türkaslan<br>
-      Essener Str. 90a<br> <!-- Hier noch deine Straße eintragen -->
-      22419Hamburg<br>          <!-- Hier noch deine Postleitzahl eintragen -->
-      Deutschland
-    </p>
-
-    <p style="margin-top: 15px;"><strong>Kontakt:</strong></p>
-    <p>
-      Telefon: +49 1575 6390366<br>
-      E-Mail: info.gartenservicenord@web.de
-    </p>
-  </div>
-</section>
+  </section>
 
 <footer>
-  <p>© 2026 Gartenservice Nord Hamburg | <a href="#impressum" style="color: #fff; text-decoration: underline;">Impressum & Datenschutz</a></p>
-</footer>
+  </footer>
 
 <script src="script.js"></script>
 
